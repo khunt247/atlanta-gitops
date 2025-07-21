@@ -26,11 +26,11 @@ jobs:
   fleet-gitops:
     runs-on: ubuntu-latest
     steps:   
-      - name: make script executable
-        run: chmod +x ./gitops.sh
+
       - name: Checkout GitOps repository
         uses: actions/checkout@v4
-
+      - name: make script executable
+        run: chmod +x ./gitops.sh
       - name: Apply latest configuration to Fleet
         uses: ./.github/gitops-action
         with:
