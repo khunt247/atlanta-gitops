@@ -15,9 +15,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: make script executable
-      run: chmod +x ./gitops.sh
-
+    
     - name: Install fleetctl
       shell: bash
       working-directory: ${{ inputs.working-directory }}
